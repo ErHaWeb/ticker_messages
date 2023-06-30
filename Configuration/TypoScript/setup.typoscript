@@ -1,0 +1,65 @@
+lib.contentElement {
+    partialRootPaths {
+        12 = EXT:ticker_messages/Resources/Private/Partials/
+    }
+
+    templateRootPaths {
+        12 = EXT:ticker_messages/Resources/Private/Templates/
+    }
+}
+
+tt_content {
+    list.20.tickermessages_list >
+
+    tickermessages_list =< lib.contentElement
+    tickermessages_list {
+        templateName = TickerMessagesList
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+            10 {
+                table = tx_tickermessages_domain_model_message
+                pidInList.field = pages
+                recursive.field = recursive
+
+                join = sys_category_record_mm ON sys_category_record_mm.uid_foreign = tx_tickermessages_domain_model_message.uid
+                join.if.isTrue.field = selected_categories
+
+                where.cObject = COA
+                where.cObject {
+                    10 = TEXT
+                    10.value = NOT tx_tickermessages_domain_model_message.hidden
+                    20 = TEXT
+                    20 {
+                        noTrimWrap = | AND sys_category_record_mm.uid_local IN (|)|
+                        field = selected_categories
+                        required = 1
+                    }
+                }
+
+                languageField = tx_tickermessages_domain_model_message.sys_language_uid
+                orderBy = tx_tickermessages_domain_model_message.sorting
+                groupBy = tx_tickermessages_domain_model_message.uid
+
+                as = tickermessages
+
+                dataProcessing {
+                    10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+                    10 {
+                        table = sys_category
+                        selectFields = sys_category.title
+                        pidInList.data = leveluid : 0
+                        recursive = 99
+                        leftjoin = sys_category_record_mm ON sys_category_record_mm.uid_local = sys_category.uid
+                        where {
+                            field = uid
+                            wrap = sys_category_record_mm.tablenames='tx_tickermessages_domain_model_message' AND sys_category_record_mm.uid_foreign = |
+                        }
+
+                        begin = 0
+                        as = categories
+                    }
+                }
+            }
+        }
+    }
+}

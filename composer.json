@@ -1,0 +1,31 @@
+{
+	"name": "erhaweb/ticker-messages",
+	"description": "This is a demo extension that demonstrates how to output custom records without a \"Classes\" directory in the extension with DatabaseQueryProcessor in a categorized list view. Thanks to Thomas Löffler and his extension \"just_news\" for the inspiration for this approach.",
+	"keywords": [
+		"Plugin"
+	],
+	"license": "GPL-2.0-or-later",
+	"type": "typo3-cms-extension",
+	"version": "1.0.0",
+	"authors": [
+		{
+			"name": "Eric Harrer",
+			"role": "Developer",
+			"email": "info@eric-harrer.de"
+		}
+	],
+	"require": {
+		"typo3/cms-core": "^11.5 || ^12.4"
+	},
+	"autoload": {
+		"psr-4": {
+			"ErHaWeb\\Tickermessages\\": "Classes/"
+		}
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "ticker_messages"
+		}
+	},
+	"prefer-stable": true
+}

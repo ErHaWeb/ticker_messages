@@ -1,0 +1,16 @@
+mod.wizards.newContentElement.wizardItems {
+    common {
+        elements {
+            tickermessages_list {
+                iconIdentifier = actions-message
+                title = Ticker Messages
+                description = Display Ticker Messages based on selected Categories
+                tt_content_defValues {
+                    CType = tickermessages_list
+                }
+            }
+        }
+
+        show := addToList(tickermessages_list)
+    }
+}
