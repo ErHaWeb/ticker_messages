@@ -4,6 +4,6 @@
 CREATE TABLE `tx_tickermessages_domain_model_message`
 (
     `title` tinytext,
-    `categories` int(11) DEFAULT '0' NOT NULL,
     `bodytext` mediumtext
+    `categories` int(11) DEFAULT '0' NOT NULL,
 );

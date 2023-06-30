@@ -5,7 +5,7 @@ defined('TYPO3') or die();
 
 return [
     'ctrl' => [
-        'title' => 'Ticker Message',
+        'title' => 'LLL:EXT:ticker_messages/Resources/Private/Language/locallang_db.xlf:tx_tickermessages_domain_model_message',
         'label' => 'title',
         'sortby' => 'sorting',
         'tstamp' => 'tstamp',
@@ -22,6 +22,7 @@ return [
         'typeicon_classes' => [
             'default' => 'actions-message',
         ],
+        'iconfile' => 'EXT:ticker_messages/Resources/Public/Icons/Extension.svg',
         'enablecolumns' => [
             'disabled' => 'hidden',
             'starttime' => 'starttime',
@@ -35,14 +36,14 @@ return [
     ],
     'columns' => [
         'title' => [
-            'label' => 'Title',
+            'label' => 'LLL:EXT:ticker_messages/Resources/Private/Language/locallang_db.xlf:tx_tickermessages_domain_model_message.title',
             'config' => [
                 'type' => 'input'
             ]
         ],
         'bodytext' => [
             'l10n_mode' => 'prefixLangTitle',
-            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.text',
+            'label' => 'LLL:EXT:ticker_messages/Resources/Private/Language/locallang_db.xlf:tx_tickermessages_domain_model_message.bodytext',
             'config' => [
                 'type' => 'text',
                 'enableRichtext' => true,
@@ -51,6 +52,7 @@ return [
             ],
         ],
         'categories' => [
+            'label' => 'LLL:EXT:ticker_messages/Resources/Private/Language/locallang_db.xlf:tx_tickermessages_domain_model_message.categories',
             'config' => [
                 'type' => 'category'
             ]

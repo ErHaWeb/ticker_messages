@@ -1,14 +1,16 @@
 <?php
 declare(strict_types=1);
 
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
-
 defined('TYPO3') or die();
 
 (static function () {
-    ExtensionManagementUtility::addStaticFile(
-        'ticker_messages',
-        'Configuration/TypoScript/',
-        'Ticker Messages'
-    );
+    /**
+     * Add static TypoScript (constants and setup) directly through TCA instead of the API function to be able to translate the title
+     */
+    if (is_array($GLOBALS['TCA']['sys_template']['columns'])) {
+        $GLOBALS['TCA']['sys_template']['columns']['include_static_file']['config']['items'][] = [
+            'LLL:EXT:ticker_messages/Resources/Private/Language/locallang_be.xlf:sys_template.TypoScript.ticker_messages',
+            'EXT:ticker_messages/Configuration/TypoScript/'
+        ];
+    }
 })();

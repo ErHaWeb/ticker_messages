@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2023-06-30T22:48:25Z" product-name="ticker_messages">
+        <header/>
+        <body>
+            <trans-unit id="sys_template.TypoScript.ticker_messages" xml:space="preserve">
+				<source>Ticker Messages: Static TypoScript</source>
+			</trans-unit>
+            <trans-unit id="content.ticker_messages.title" xml:space="preserve">
+                <source>Ticker Messages</source>
+            </trans-unit>
+            <trans-unit id="plugin.ticker_messages.description" xml:space="preserve">
+                <source>Display Ticker Messages based on selected Categories</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

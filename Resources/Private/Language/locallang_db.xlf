@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2023-06-30T22:48:25Z" product-name="ticker_messages">
+        <header/>
+        <body>
+            <trans-unit id="tx_tickermessages_domain_model_message" xml:space="preserve">
+				<source>Ticker Message</source>
+			</trans-unit>
+            <trans-unit id="tx_tickermessages_domain_model_message.title" xml:space="preserve">
+				<source>Title</source>
+			</trans-unit>
+            <trans-unit id="tx_tickermessages_domain_model_message.bodytext" xml:space="preserve">
+				<source>Message</source>
+			</trans-unit>
+            <trans-unit id="tx_tickermessages_domain_model_message.categories" xml:space="preserve">
+				<source>Categories</source>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>

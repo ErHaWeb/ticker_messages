@@ -26,7 +26,7 @@ defined('TYPO3') or die();
         'CType',
         [
             // title
-            'Ticker Messages',
+            'LLL:EXT:ticker_messages/Resources/Private/Language/locallang_be.xlf:content.ticker_messages.title',
             // plugin signature: extkey_identifier
             'tickermessages_list',
             // icon identifier

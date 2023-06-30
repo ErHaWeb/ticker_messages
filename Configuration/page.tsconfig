@@ -3,8 +3,8 @@ mod.wizards.newContentElement.wizardItems {
         elements {
             tickermessages_list {
                 iconIdentifier = actions-list
-                title = Ticker Messages
-                description = Display Ticker Messages based on selected Categories
+                title = LLL:EXT:ticker_messages/Resources/Private/Language/locallang_be.xlf:content.ticker_messages.title
+                description = LLL:EXT:ticker_messages/Resources/Private/Language/locallang_be.xlf:content.ticker_messages.description
                 tt_content_defValues {
                     CType = tickermessages_list
                 }
