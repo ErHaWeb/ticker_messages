@@ -10,7 +10,7 @@ defined('TYPO3') or die();
 
 (static function () {
     $autoIncludeTypoScript = GeneralUtility::makeInstance(ExtensionConfiguration::class)
-        ->get('ticker_messages', 'autoIncludeTypoScript');
+        ?->get('ticker_messages', 'autoIncludeTypoScript');
 
     if($autoIncludeTypoScript) {
         ExtensionManagementUtility::addTypoScript(
