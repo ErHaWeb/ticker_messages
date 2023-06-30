@@ -19,6 +19,9 @@ return [
         'translationSource' => 'l10n_source',
         'transOrigDiffSourceField' => 'l18n_diffsource',
         'languageField' => 'sys_language_uid',
+        'typeicon_classes' => [
+            'default' => 'actions-message',
+        ],
         'enablecolumns' => [
             'disabled' => 'hidden',
             'starttime' => 'starttime',
