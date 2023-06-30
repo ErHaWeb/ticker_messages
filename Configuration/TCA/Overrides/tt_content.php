@@ -30,7 +30,7 @@ defined('TYPO3') or die();
             // plugin signature: extkey_identifier
             'tickermessages_list',
             // icon identifier
-            'actions-message',
+            'actions-list',
         ],
         'textmedia',
         'after'
@@ -50,5 +50,5 @@ defined('TYPO3') or die();
          '
     ];
 
-    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['tickermessages_list'] = 'actions-message';
+    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['tickermessages_list'] = 'actions-list';
 })();

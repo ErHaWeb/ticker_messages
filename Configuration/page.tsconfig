@@ -2,7 +2,7 @@ mod.wizards.newContentElement.wizardItems {
     common {
         elements {
             tickermessages_list {
-                iconIdentifier = actions-message
+                iconIdentifier = actions-list
                 title = Ticker Messages
                 description = Display Ticker Messages based on selected Categories
                 tt_content_defValues {
