@@ -1,0 +1,2 @@
+# cat=basic/enable/050; type=boolean; label=Auto Include TypoScript
+autoIncludeTypoScript = 1
