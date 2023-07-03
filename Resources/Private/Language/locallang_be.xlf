@@ -9,7 +9,7 @@
             <trans-unit id="content.ticker_messages.title" xml:space="preserve">
                 <source>Ticker Messages</source>
             </trans-unit>
-            <trans-unit id="plugin.ticker_messages.description" xml:space="preserve">
+            <trans-unit id="content.ticker_messages.description" xml:space="preserve">
                 <source>Display Ticker Messages based on selected Categories</source>
             </trans-unit>
         </body>
