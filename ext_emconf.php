@@ -10,6 +10,7 @@ $EM_CONF[$_EXTKEY] = [
     'version' => '1.0.0',
     'state' => 'stable',
     'author' => 'Eric Harrer',
+    'author_email' => 'info@eric-harrer.de',
     'constraints' => [
         'depends' => [
             'typo3' => '10.4.0-12.4.99',
