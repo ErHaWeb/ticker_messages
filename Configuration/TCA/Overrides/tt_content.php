@@ -7,19 +7,6 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 defined('TYPO3') or die();
 
 (static function (): void {
-
-    ArrayUtility::mergeRecursiveWithOverrule(
-        $GLOBALS['TCA']['tt_content']['types']['list'],
-        [
-            'subtypes_excludelist' => [
-                'tickermessages_list' => 'select_key,categories',
-            ],
-            'subtypes_addlist' => [
-                'tickermessages_list' => 'selected_categories',
-            ]
-        ]
-    );
-
     // Adds the content element to the "Type" dropdown
     ExtensionManagementUtility::addTcaSelectItem(
         'tt_content',
@@ -36,19 +23,37 @@ defined('TYPO3') or die();
         'after'
     );
 
-    $GLOBALS['TCA']['tt_content']['types']['tickermessages_list'] = [
-        'showitem' => '
-            --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
-               --palette--;;general,
-               header,
-               selected_categories,
-               pages,
-               recursive,
-            --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
-               --palette--;;hidden,
-               --palette--;;access,
-         '
-    ];
-
-    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['tickermessages_list'] = 'actions-list';
+    ArrayUtility::mergeRecursiveWithOverrule(
+        $GLOBALS['TCA']['tt_content'],
+        [
+            'ctrl' => [
+                'typeicon_classes' => [
+                    'tickermessages_list' => 'actions-list',
+                ]
+            ],
+            'types' => [
+                'tickermessages_list' => [
+                    'showitem' =>
+                        '
+                        --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
+                            --palette--;;general,
+                            --palette--;;headers,
+                            selected_categories,
+                            pages;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:pages.ALT.list_formlabel,
+                            recursive,
+                        --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
+                            --palette--;;frames,
+                            --palette--;;appearanceLinks,
+                        --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
+                            --palette--;;language, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
+                            --palette--;;hidden,
+                            --palette--;;access,
+                        --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories, categories,
+                        --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes, rowDescription,
+                        --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended
+                        '
+                ]
+            ]
+        ]
+    );
 })();
