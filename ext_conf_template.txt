@@ -1,2 +1,2 @@
-# cat=basic/enable/050; type=boolean; label=Auto Include TypoScript
+# cat=basic/enable/050; type=boolean; label=LLL:EXT:ticker_messages/Resources/Private/Language/locallang_be.xlf:extmng.autoIncludeTypoScript
 autoIncludeTypoScript = 1

@@ -3,6 +3,9 @@
     <file source-language="en" datatype="plaintext" original="messages" date="2023-06-30T22:48:25Z" product-name="ticker_messages">
         <header/>
         <body>
+            <trans-unit id="extmng.autoIncludeTypoScript" xml:space="preserve">
+				<source>Auto Include TypoScript:If you activate this option, the TypoScript of this extension will be included automatically and does not have to be included in the template record under static includes.</source>
+			</trans-unit>
             <trans-unit id="sys_template.TypoScript.ticker_messages" xml:space="preserve">
 				<source>Ticker Messages: Static TypoScript</source>
 			</trans-unit>
