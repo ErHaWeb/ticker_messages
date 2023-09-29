@@ -33,6 +33,7 @@ tt_content {
                         noTrimWrap = | AND sys_category_record_mm.uid_local IN (|)|
                         field = selected_categories
                         required = 1
+                        if.isTrue.field = selected_categories
                     }
                 }
 
